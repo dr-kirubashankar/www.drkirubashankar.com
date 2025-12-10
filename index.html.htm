@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mano ENT and Skull base surgery Clinic | Dr. Kiruba Shankar - Skull Base Surgeon, Chennai</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #FF3366;
+            --secondary: #00D4FF;
+            --accent: #FFD166;
+            --dark: #000000;
+            --dark-bg: #111111;
+            --card-bg: #1A1A1A;
+            --text: #FFFFFF;
+            --text-light: #CCCCCC;
+        }
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--dark);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .clinic-name {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--secondary);
+            line-height: 1.2;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .doctor-name {
+            font-size: 1.1rem;
+            color: var(--primary);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: all 0.3s;
+            padding: 5px 0;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            bottom: 0;
+            left: 0;
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: var(--text);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(255, 51, 102, 0.2)), url('https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            padding: 150px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 50%, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
+        }
+
+        .hero h1 {
+            color: white;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            color: var(--text-light);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(90deg, var(--primary), #FF6699);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(255, 51, 102, 0.4);
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 51, 102, 0.6);
+            background: linear-gradient(90deg, #FF6699, var(--primary));
+        }
+
+        .cta-button.secondary {
+            background: linear-gradient(90deg, var(--secondary), #00A8FF);
+            box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4);
+        }
+
+        .cta-button.secondary:hover {
+            background: linear-gradient(90deg, #00A8FF, var(--secondary));
+            box-shadow: 0 10px 25px rgba(0, 212, 255, 0.6);
+        }
+
+        /* Sections */
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .section-title h2 {
+            font-size: 2.8rem;
+            position: relative;
+            display: inline-block;
+            color: var(--secondary);
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        /* About Section */
+        .about-container {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            border-left: 5px solid var(--primary);
+        }
+
+        .about-image {
+            flex: 1;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s;
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .about-content {
+            flex: 1;
+        }
+
+        .about-content h3 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+            text-transform: uppercase;
+        }
+
+        .about-content p {
+            margin-bottom: 20px;
+            color: var(--text-light);
+        }
+
+        .qualifications {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .qualifications li {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px;
+            border-radius: 8px;
+            list-style: none;
+            border-left: 3px solid var(--accent);
+        }
+
+        /* Services Section */
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 35px;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 35px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+            border-top: 4px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            background: rgba(255, 51, 102, 0.1);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            border: 2px solid var(--primary);
+        }
+
+        .service-icon i {
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            color: var(--secondary);
+        }
+
+        /* Patient Information Section */
+        .info-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .info-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+        }
+
+        .info-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        .info-card h3 {
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .info-card h3 i {
+            margin-right: 15px;
+            color: var(--primary);
+        }
+
+        .info-card ul {
+            padding-left: 20px;
+        }
+
+        .info-card li {
+            margin-bottom: 10px;
+            color: var(--text-light);
+        }
+
+        /* Patient Reviews Section */
+        .reviews-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .review-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .review-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .review-info h4 {
+            color: var(--secondary);
+            margin-bottom: 5px;
+        }
+
+        .review-stars {
+            color: var(--accent);
+        }
+
+        .review-text {
+            color: var(--text-light);
+            font-style: italic;
+            line-height: 1.7;
+        }
+
+        /* Surgical Videos Section */
+        .videos-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .video-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+        }
+
+        .video-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        .video-thumbnail {
+            height: 200px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video-thumbnail i {
+            font-size: 4rem;
+            color: rgba(255, 255, 255, 0.9);
+            z-index: 2;
+        }
+
+        .video-content {
+            padding: 20px;
+        }
+
+        .video-content h3 {
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+
+        .video-content p {
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            display: flex;
+            gap: 50px;
+            background: var(--card-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-info {
+            flex: 1;
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 212, 255, 0.1));
+        }
+
+        .contact-info h3 {
+            color: var(--secondary);
+        }
+
+        .contact-details {
+            margin-top: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+
+        .contact-icon {
+            background: rgba(0, 212, 255, 0.1);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+            border: 1px solid var(--secondary);
+        }
+
+        .contact-icon i {
+            font-size: 1.3rem;
+            color: var(--secondary);
+        }
+
+        .social-links {
+            display: flex;
+            margin-top: 30px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            margin-right: 15px;
+            text-decoration: none;
+            color: var(--text);
+            font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .linkedin-btn {
+            background: linear-gradient(45deg, #0077B5, #00A0DC) !important;
+        }
+
+        .contact-form {
+            flex: 1;
+            padding: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-light);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 14px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            font-family: 'Raleway', sans-serif;
+            font-size: 1rem;
+            color: var(--text);
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--secondary);
+            box-shadow: 0 0 10px rgba(0, 212, 255, 0.2);
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(to top, #000000, #111111);
+            color: white;
+            padding: 60px 0 20px;
+            border-top: 2px solid var(--primary);
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .footer-column h3 {
+            color: var(--secondary);
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary);
+            display: inline-block;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1100px) {
+            .about-container,
+            .contact-container {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.95);
+                flex-direction: column;
+                padding: 20px 0;
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+                backdrop-filter: blur(10px);
+                border-top: 2px solid var(--primary);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 0;
+                text-align: center;
+                padding: 15px 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero {
+                padding: 100px 0;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section {
+                padding: 70px 0;
+            }
+
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+
+            .about-container {
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+
+            .service-card,
+            .info-card,
+            .review-card,
+            .video-card {
+                padding: 25px;
+            }
+
+            .qualifications {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="clinic-name">Mano ENT and Skull base surgery Clinic</div>
+                <div class="doctor-name">Dr. Kiruba Shankar Manoharan</div>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#patient-info">Patient Info</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#videos">Surgical Videos</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1 class="fade-in">Precision Skull Base Surgery</h1>
+            <p class="fade-in">Dr. Kiruba Shankar Manohran is a leading ENT and skull base surgeon in Chennai, specializing in complex cranial procedures with cutting-edge technology and compassionate care.</p>
+            <a href="#contact" class="cta-button fade-in">Call us for appointments</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Dr. Kiruba Shankar</h2>
+            </div>
+
+            <div class="about-container fade-in">
+                <div class="about-image">
+                    <IMG="" alt="Dr. Kiruba Shankar Manohran">
+                </div>
+                <div class="about-content">
+                    <h3>Specialized Skull Base Surgeon</h3>
+                    <p>Dr. Kiruba Shankar Manohran is a highly skilled ENT surgeon with over 18 years of experience, specializing exclusively in skull base surgery. He has transformed the lives of countless patients with complex cranial conditions.</p>
+                    <p>After completing his advanced fellowship in skull base surgery from prestigious international institutions, Dr. Shankar has pioneered several minimally invasive techniques that have become the standard of care in Chennai.</p>
+                    <p>He combines surgical precision with a patient-centric approach, ensuring optimal outcomes with reduced recovery times.</p>
+
+                    <div style="margin-top: 30px;">
+                        <h4 style="color: var(--accent);">Qualifications & Credentials</h4>
+                        <ul class="qualifications">
+                            <li>MS (ENT) - JIPMER pondicherry</li>
+                            <li>DNB (ENT) - National Board- Gold medalist</li>
+                            <li>Fellowship in Skull Base Surgery (AIIMS, New Delhi)</li>
+                            <li>Member,Royal College of Surgeons, Edinburgh</li>
+                            <li>Member, Indian Society of Skull Base Surgery</li>
+                            <li>18+ Years of Surgical Experience</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services" style="background: linear-gradient(135deg, rgba(0,0,0,0.9), rgba(255,51,102,0.1));">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Specialized Services</h2>
+            </div>
+
+            <div class="services-container">
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Advanced Skull Base Surgery</h3>
+                    <p>Minimally invasive endoscopic approaches for tumors and conditions affecting the anterior, middle, and posterior skull base.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-skull"></i>
+                    </div>
+                    <h3>Endoscopic Pituitary Surgery</h3>
+                    <p>Transnasal endoscopic removal of pituitary tumors with navigation guidance for precision and safety.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-head-side-mask"></i>
+                    </div>
+                    <h3>Head & Neck Oncology</h3>
+                    <p>Comprehensive management of benign and malignant tumors with microvascular reconstruction when needed.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-allergies"></i>
+                    </div>
+                    <h3>Rhinology & Sinus Surgery</h3>
+                    <p>Advanced endoscopic sinus surgery for chronic sinusitis, nasal polyps, and CSF leak repairs.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-ear-deaf"></i>
+                    </div>
+                    <h3>Otology & Neurotology</h3>
+                    <p>Microsurgery for hearing restoration, cochlear implants, and management of vestibular disorders.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-comments-medical"></i>
+                    </div>
+                    <h3>Second Opinion Consultations</h3>
+                    <p>Detailed review of complex cases with multidisciplinary approach for optimal treatment planning.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Patient Information Section -->
+    <section class="section" id="patient-info">
+        <div class="container">
+            <div class="section-title">
+                <h2>Patient Information</h2>
+            </div>
+
+            <div class="info-container">
+                <div class="info-card fade-in">
+                    <h3><i class="fas fa-calendar-check"></i> Before Your Appointment</h3>
+                    <ul>
+                        <li>Bring all previous medical records and imaging (CT/MRI scans)</li>
+                        <li>List all current medications and allergies</li>
+                        <li>Prepare a list of symptoms and questions</li>
+                        <li>Arrive 15 minutes before your scheduled time</li>
+                        <li>Carry your insurance information if applicable</li>
+                    </ul>
+                </div>
+
+                <div class="info-card fade-in">
+                    <h3><i class="fas fa-procedures"></i> Pre-Surgical Instructions</h3>
+                    <ul>
+                        <li>Complete pre-operative tests as advised</li>
+                        <li>Follow fasting instructions (typically 8 hours)</li>
+                        <li>Stop certain medications as directed (blood thinners, etc.)</li>
+                        <li>Arrange for a companion to accompany you</li>
+                        <li>Pack essential items for hospital stay if required</li>
+                    </ul>
+                </div>
+
+                <div class="info-card fade-in">
+                    <h3><i class="fas fa-home-heart"></i> Post-Operative Care</h3>
+                    <ul>
+                        <li>Follow all medication schedules precisely</li>
+                        <li>Attend all follow-up appointments</li>
+                        <li>Keep surgical site clean and dry</li>
+                        <li>Watch for signs of infection or complications</li>
+                        <li>Gradually resume activities as advised</li>
+                    </ul>
+                </div>
+
+                <div class="info-card fade-in">
+                    <h3><i class="fas fa-file-medical"></i> Apollo Main hospitals, Greams road</h3>
+                    <ul>
+                        <li>   <a href="https://www.youtube.com/watch?v=5WGJCJYF8u4" target="_blank" class="cta-button" style="padding: 10px 20px; font-size: 0.9rem;">Watch Video</a>
+                            <li>We accept most major insurance providers</li>
+                        <li>Insurance and Pre-authorization assistance available</li>
+                        <li>Transparent pricing with no hidden costs</li>
+                        <li>Expertise with multidisciplinary team at the institution</li>
+                        <li> We have performed major surgries with Apollo hospitals</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Patient Reviews Section -->
+    <section class="section" id="reviews" style="background: linear-gradient(135deg, rgba(0,0,0,0.9), rgba(0,212,255,0.1));">
+        <div class="container">
+            <div class="section-title">
+                <h2>Patient Reviews & Testimonials</h2>
+            </div>
+
+            <div class="reviews-container">
+                <div class="review-card fade-in">
+                    <div class="review-header">
+                        <div class="review-avatar">RK</div>
+                        <div class="review-info">
+                            <h4>Rajesh Kumar</h4>
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-text">
+                        "Dr. Kiruba Shankar performed a complex skull base surgery on me. His expertise and care were exceptional. I had a pituitary tumor, and the endoscopic approach meant minimal pain and quick recovery. Highly recommended!"
+                    </div>
+                </div>
+
+                <div class="review-card fade-in">
+                    <div class="review-header">
+                        <div class="review-avatar">PM</div>
+                        <div class="review-info">
+                            <h4>Priya Menon</h4>
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-text">
+                        "After years of chronic sinus issues, Dr. Shankar's advanced sinus surgery changed my life. He explained everything patiently and the post-operative care was excellent. The entire team at Mano ENT Clinic is wonderful."
+                    </div>
+                </div>
+
+                <div class="review-card fade-in">
+                    <div class="review-header">
+                        <div class="review-avatar">AS</div>
+                        <div class="review-info">
+                            <h4>Arvind Sharma</h4>
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-text">
+                        "My father underwent acoustic neuroma surgery with Dr. Shankar. The precision and skill were remarkable. He preserved facial nerve function completely. We are forever grateful for his expertise and compassionate approach."
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://g.page/r/CTPycA-nP9lOEAE/review" class="cta-button secondary">Review us on Google</a>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#contact" class="cta-button secondary">Share Your Experience</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Surgical Videos Section -->
+    <section class="section" id="videos">
+        <div class="container">
+            <div class="section-title">
+                <h2>Surgical Videos & Lectures</h2>
+            </div>
+
+            <div class="videos-container">
+                <div class="video-card fade-in">
+                    <div class="video-thumbnail">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <div class="video-content">
+                        <h3>Endoscopic Pituitary Surgery</h3>
+                        <p>Demonstration of transnasal endoscopic approach for pituitary adenoma resection with intraoperative navigation.</p>
+                        <a href="https://youtu.be/JpYDcDxxiLE?si=aS4Lfp4L8UY0Dd1z" target="_blank" class="cta-button" style="padding: 10px 20px; font-size: 0.9rem;">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="video-card fade-in">
+                    <div class="video-thumbnail">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <div class="video-content">
+                        <h3>Neurology India Publication </h3>
+                        <p> Sphenoid surgery by Flight door technique .</p>
+                        <a href="https://www.youtube.com/watch?v=fqnqnPEMbLE" target="_blank" class="cta-button" style="padding: 10px 20px; font-size: 0.9rem;">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="video-card fade-in">
+                    <div class="video-thumbnail">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <div class="video-content">
+                        <h3>CSF Leak Repair Technique</h3>
+                        <p>Multilayer endoscopic fluorescien guided repair of cerebrospinal fluid leak using fat and mucosal graft.</p>
+                        <a href="https://www.youtube.com/watch?v=nA2RADgzI-Y" target="_blank" class="cta-button" style="padding: 10px 20px; font-size: 0.9rem;">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="video-card fade-in">
+                    <div class="video-thumbnail">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <div class="video-content">
+                        <h3>Endoscopic resection of craniopharyngioma</h3>
+                        <p> Endoscopic rfesection of craniopharyngioma with previous failed ommaya reservoir.</p>
+                        <a href="https://www.youtube.com/watch?v=Lt95Gs2Ds48" target="_blank" class="cta-button" style="padding: 10px 20px; font-size: 0.9rem;">Watch Video</a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <p style="color: var(--text-light);">More surgical videos and educational content available on our YouTube channel.</p>
+                <a href="https://www.youtube.com/@kirubashankar1801" target="_blank" class="cta-button secondary" style="margin-top: 15px;">
+                    <i class="fab fa-youtube" style="margin-right: 10px;"></i> Subscribe to Our Channel
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact" style="background: linear-gradient(135deg, rgba(0,0,0,0.9), rgba(255,209,102,0.1));">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact & Appointment</h2>
+            </div>
+
+            <div class="contact-container fade-in">
+                <div class="contact-info">
+                    <h3>Mano ENT Clinic and Skull base surgery Clinic</h3>
+                    <p style="color: var(--text-light);">ENT & Skull Base Surgery Center in Chennai</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Clinic Address</h4>
+                                <p>39/8, kambar street,<br>East tambaram, Chennai - 600059</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Phone Number</h4>
+                                <p>+91 44 22393410</p>
+                                <p>+91 7904724599 (Emergency/WhatsApp)</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email Address</h4>
+                                <p>drkirubashankar@gmail.com</p>
+                                <p>drkiruba_s@apollohospitals.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4>Clinic Hours</h4>
+                                <p>Mon-Sat: 6:00 PM - 8:00 PM By prior appointment only</p>
+                                <p>Sunday: Emergencies only</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="www.linkedin.com/in/kiruba-shankar-skull-base" target="_blank" class="linkedin-btn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://twitter.com/drkirubashankar" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=100082002941673" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com/drkirubashankar" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@kirubashankar1801" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Book an Appointment</h3>
+                    <form id="appointmentForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="date">Preferred Date *</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="condition">Condition / Concern *</label>
+                            <select id="condition" name="condition" required>
+                                <option value="">Select a condition</option>
+                                <option value="skull_base">Skull Base Tumor</option>
+                                <option value="pituitary">Pituitary Tumor</option>
+                                <option value="sinus">Chronic Sinusitis</option>
+                                <option value="hearing">Hearing Loss</option>
+                                <option value="acoustic">Acoustic Neuroma</option>
+                                <option value="csf">CSF Leak</option>
+                                <option value="other">Other ENT Concern</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Additional Details</label>
+                            <textarea id="message" name="message" placeholder="Please provide any additional details about your condition..."></textarea>
+                        </div>
+
+                        <button type="submit" class="cta-button" style="width: 100%;">Request Appointment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>Mano ENT Clinic</h3>
+                    <p style="color: var(--text-light);">Specialized center for advanced ENT and skull base surgery in Chennai, providing world-class care with cutting-edge technology.</p>
+                    <div style="margin-top: 20px;">
+                        <a href="https://linkedin.com/in/drkirubashankar" target="_blank" class="linkedin-btn" style="display: inline-flex; margin-right: 15px;">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <span style="color: var(--text-light); font-size: 0.9rem;">Connect with Dr. Kiruba Shankar on LinkedIn</span>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Dr. Kiruba Shankar</a></li>
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#patient-info">Patient Information</a></li>
+                        <li><a href="#reviews">Patient Reviews</a></li>
+                        <li><a href="#videos">Surgical Videos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt" style="margin-right: 10px; color: var(--secondary);"></i>39/8, kambar street,<br>East tambaram, Chennai - 600059</li>
+                        <li><i class="fas fa-phone-alt" style="margin-right: 10px; color: var(--secondary);"></i> +91 44 22393410</li>
+                        <li><i class="fas fa-envelope" style="margin-right: 10px; color: var(--secondary);"></i> drkirubashankar@gmail.com</li>
+                        <li><i class="fas fa-clock" style="margin-right: 10px; color: var(--secondary);"></i> Mon-Sat: 6PM - 8PM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2025 Mano ENT Clinic. All rights reserved. | Dr. Kiruba Shankar Manohran - Skull Base Surgeon, Chennai</p>
+                <p style="margin-top: 10px; color: var(--accent);">This website is for demonstration purposes. </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+
+            // Change icon based on menu state
+            const icon = mobileMenuBtn.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    navLinks.classList.remove('active');
+                    mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+                    mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Appointment form submission
+        const appointmentForm = document.getElementById('appointmentForm');
+
+        appointmentForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Get form data
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const phone = formData.get('phone');
+            const condition = formData.get('condition');
+
+            // In a real implementation, you would send this data to a server
+            // For this demo, we'll show a colorful alert
+            const alertDiv = document.createElement('div');
+            alertDiv.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: linear-gradient(135deg, var(--primary), var(--secondary));
+                color: white;
+                padding: 20px 25px;
+                border-radius: 10px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+                z-index: 10000;
+                max-width: 400px;
+                animation: fadeInUp 0.5s ease-out;
+            `;
+            alertDiv.innerHTML = `
+                <h3 style="margin-bottom: 10px; color: white;">Appointment Request Received!</h3>
+                <p style="color: rgba(255,255,255,0.9);">Thank you, ${name}! We will contact you at ${phone} within 24 hours to confirm your appointment for ${condition}.</p>
+            `;
+            document.body.appendChild(alertDiv);
+
+            // Remove alert after 5 seconds
+            setTimeout(() => {
+                alertDiv.style.animation = 'fadeInUp 0.5s ease-out reverse';
+                setTimeout(() => {
+                    document.body.removeChild(alertDiv);
+                }, 500);
+            }, 5000);
+
+            // Reset the form
+            appointmentForm.reset();
+        });
+
+        // Set minimum date for appointment to today
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('date').setAttribute('min', today);
+
+        // Add fade-in animation to elements when scrolling
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with the fade-in class initially
+        document.querySelectorAll('.service-card, .info-card, .review-card, .video-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add animation to hero elements
+        window.addEventListener('load', () => {
+            document.querySelectorAll('.hero h1, .hero p, .hero .cta-button').forEach((el, index) => {
+                setTimeout(() => {
+                    el.classList.add('fade-in');
+                }, index * 300);
+            });
+
+            // Add fade-in to about container
+            setTimeout(() => {
+                document.querySelector('.about-container').classList.add('fade-in');
+            }, 900);
+
+            // Add fade-in to contact container
+            setTimeout(() => {
+                document.querySelector('.contact-container').classList.add('fade-in');
+            }, 900);
+        });
+    </script>
+</body>
+</html>
